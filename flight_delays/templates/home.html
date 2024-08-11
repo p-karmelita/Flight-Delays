@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
     <!-- Required meta tags -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/todo/css/base.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/todo/css/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='css/base.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='css/bootstrap.css') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>TodoApp</title>
+    <title>Flight Delays - Linear Regression Prediction</title>
 
 </head>
 <body>
 
 <div>
     <nav class="navbar navbar-expand-md navbar-dark main-color fixed-top">
-        <a class="navbar-brand" href="#">Todo App</a>
+        <a class="navbar-brand" href="{{ url_for('welcome') }}">Flight Delays</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home </a>
+                    <a class="nav-link" href="{{ url_for('data') }}">Data</a>
                 </li>
             </ul>
         </div>
@@ -35,50 +35,16 @@
             Flight Delays
         </div>
         <div class="card-body">
-            <h5 class="card-title">TBA</h5>
-            <p class="card-text">Information regarding stuff that needs to be complete</p>
+            <h5 class="card-title">Welcome to my app, predicting arrival delays of planes.</h5>
+            <img src="{{ url_for('static', path='diagram.png') }}">
+            <h4 class="card-title">Predictions on train data: 0.89</h4>
+            <h4>MSE on train data =  161.1558259598328</h4>
 
-            <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Info</th>
-      <th scope="col">Actions</th>
-
-    </tr>
-  </thead>
-  <tbody>
-
-<tr class="pointer" >
-
-      <td>1</td>
-      <td id="td1">Take out the trash </td>
-      <td><button type="button" class="btn btn-success">Complete</button> <button type="button" class="btn btn-danger">Delete</button> </td>
-    </tr>
-
-  <tr class="pointer">
-
-      <td>2</td>
-      <td>Take out the trash</td>
-      <td><button type="button" class="btn btn-success">Complete</button> <button type="button" class="btn btn-danger">Delete</button> </td>
-    </tr>
-
-  <tr class="pointer" >
-
-      <td>3</td>
-      <td >Take out the trash </td>
-      <td><button type="button" class="btn btn-success">Complete</button> <button type="button" class="btn btn-danger">Delete</button> </td>
-    </tr>
-
-  </tbody>
-</table>
-
-            <a href="#" class="btn btn-primary">Add a new Todo!</a>
         </div>
     </div>
 </div>
-<script src="{{ url_for('static', path='/todo/js/jquery-slim.js') }}"></script>
-<script src="{{ url_for('static', path='/todo/js/popper.js') }}"></script>
-<script src="{{ url_for('static', path='/todo/js/bootstrap.js') }}"></script>
+<script src="{{ url_for('static', path='js/jquery-slim.js') }}"></script>
+<script src="{{ url_for('static', path='js/popper.js') }}"></script>
+<script src="{{ url_for('static', path='js/bootstrap.js') }}"></script>
 </body>
 </html>
