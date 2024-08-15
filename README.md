@@ -5,7 +5,6 @@
 ## Dataset
 > 'flights.csv' Large dataset, including 31 columns and 5819078 rows with data.
 ### Deployment
-```git clone https://github.com/p-karmelita/Flight-Delays.git
 docker build -t flightdelays .
 docker compose up```
 
@@ -15,7 +14,7 @@ Pandas
 FastAPI
 Docker
 NBConvert
-Python```
+Python
 
 > [!IMPORTANT]
 > Author: Piotr Karmelita.
