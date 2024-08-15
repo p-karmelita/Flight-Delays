@@ -8,7 +8,7 @@
  - ```docker build -t flights .```
  - ```docker compose up```
 
-> ### Technologies
+ ### Technologies
 > - Scikit-learn
 > - Pandas
 > - FastAPI
@@ -19,4 +19,7 @@
 
 > Author: Piotr Karmelita
 
-[https://www.kaggle.com/datasets/gauravmehta13/airline-flight-delays][1]
+Dataset[^1].
+
+[^1]: [My reference.](https://www.kaggle.com/datasets/gauravmehta13/airline-flight-delays)
+
