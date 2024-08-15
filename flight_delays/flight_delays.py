@@ -1,6 +1,10 @@
+import io
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from math import sqrt
+import pickle
+
 
 flights = pd.read_csv('./data/flights.csv', low_memory=False)
 
@@ -107,11 +111,11 @@ variance = [sched_dep_v, dep_time_v, dep_delay_v, sched_time_v, elaps_time_v, ai
 stand_dev = [sched_dep_sd, dep_time_sd, dep_delay_sd, sched_time_sd, elaps_time_sd, air_time_sd, distance_sd,
              sched_arr_sd, arr_time_sd, arr_delay_sd]
 
-df = pd.DataFrame([stand_dev], columns=['Planowany odlot', 'Czas odlotu', 'Opóźnienie odlotu', 'Planowany czas',
-                                        'Czas trwania lotu', 'Czas w powietrzu', 'Dystans', 'Planowany przylot',
-                                        'Czas przylotu', 'Opóźnienie przylotu'])
-
-df.plot(kind='bar', figsize=(9, 4), title='Odchylenie standardowe.')
+# df = pd.DataFrame([stand_dev], columns=['Planowany odlot', 'Czas odlotu', 'Opóźnienie odlotu', 'Planowany czas',
+#                                         'Czas trwania lotu', 'Czas w powietrzu', 'Dystans', 'Planowany przylot',
+#                                         'Czas przylotu', 'Opóźnienie przylotu'])
+#
+# df.plot(kind='bar', figsize=(9, 4), title='Odchylenie standardowe.')
 
 
 import pandas as pd
@@ -178,10 +182,10 @@ arrival_delay = null_arrdelay / len(flights['ARRIVAL_DELAY']) * 100
 full_len = len(flights)
 full_len
 data = [dep_time, dep_delay, sched_time, elapsed_time, air_time, arrival_time, arrival_delay]
-df = pd.DataFrame([data], columns=['Czas odlotu','Opóźnienie odlotu', 'Zaplanowany czas', 'Czas który upłynął',
-                                 'Czas lotu', 'Czas przylotu', 'Opóźnienie przylotu'])
-plt.style.use('bmh')
-df.plot(kind='bar', figsize=(11, 3), title='Wartość procentowa pustych wartości poszczególnych kolumn.')
+# df = pd.DataFrame([data], columns=['Czas odlotu','Opóźnienie odlotu', 'Zaplanowany czas', 'Czas który upłynął',
+#                                  'Czas lotu', 'Czas przylotu', 'Opóźnienie przylotu'])
+# plt.style.use('bmh')
+# df.plot(kind='bar', figsize=(11, 3), title='Wartość procentowa pustych wartości poszczególnych kolumn.')
 
 arrival_delay = flights['ARRIVAL_DELAY']
 max_hours_delay = arrival_delay.max() / 60
@@ -275,9 +279,9 @@ stats.kstest(arr_delay, stats.norm.cdf)
 
 flights['ARRIVAL_DELAY'].describe()
 
-sns.heatmap(round(flights.corr(), 2), annot=True, linewidths=0.5)
-
-df = pd.DataFrame(flights, columns=['ARRIVAL_DELAY', 'DEPARTURE_DELAY']).sample(n=100000, random_state=1, replace=True)
+# sns.heatmap(round(flights.corr(), 2), annot=True, linewidths=0.5)
+#
+# df = pd.DataFrame(flights, columns=['ARRIVAL_DELAY', 'DEPARTURE_DELAY']).sample(n=100000, random_state=1, replace=True)
 
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn import metrics
@@ -299,13 +303,13 @@ y, z
 
 y_pred = model.predict(X_test)
 
-plt.scatter(X_test, Y_test, color='b', label='Actual Data')
-plt.plot(X_test, y_pred, color='r', label='Regression Line')
-plt.xlabel('X-axis')
-plt.ylabel('Y-axis')
-plt.legend()
-plt.title('Linear Regression')
-plt.show()
+# plt.scatter(X_test, Y_test, color='b', label='Actual Data')
+# plt.plot(X_test, y_pred, color='r', label='Regression Line')
+# plt.xlabel('X-axis')
+# plt.ylabel('Y-axis')
+# plt.legend()
+# plt.title('Linear Regression')
+# plt.show()
 
 df = pd.DataFrame(flights, columns=['DEPARTURE_TIME', 'DEPARTURE_DELAY', 'SCHEDULED_TIME', 'ARRIVAL_TIME', 'ARRIVAL_DELAY'])
 
@@ -326,3 +330,7 @@ y_prediction = model.predict(X_train)
 print('MSE on train data = ' , metrics.mean_squared_error(Y_train, y_prediction))
 
 y_pred = model.predict(X_test)
+
+
+with open('model.pkl', 'wb') as files:
+    pickle.dump(model, files)
