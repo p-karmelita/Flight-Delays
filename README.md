@@ -2,13 +2,12 @@
 
 # Flight Delays
 > Flight Delays is a data science project where I use a basic linear regression model to predict the target variable arrival_delays from the flights dataset.
-## Dataset
-> 'flights.csv' Large dataset, including 31 columns and 5819078 rows with data.
-### Deployment
-> Build the Docker image:
-```docker build -t yourname .```
 
-> Run the Docker container:
+### Deployment
+ Build the Docker image:
+```docker build -t flights .```
+
+ Run the Docker container:
 ```docker compose up```
 
 #### Technologies
@@ -20,4 +19,4 @@
  - Python
 
 > [!IMPORTANT]
-> Author: Piotr Karmelita.
+> Author: Piotr Karmelita
