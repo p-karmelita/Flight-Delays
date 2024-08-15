@@ -5,16 +5,19 @@
 ## Dataset
 > 'flights.csv' Large dataset, including 31 columns and 5819078 rows with data.
 ### Deployment
-docker build -t flightdelays .
-docker compose up```
+> Build the Docker image:
+```docker build -t yourname .```
+
+> Run the Docker container:
+```docker compose up```
 
 #### Technologies
-```Scikit-learn
-Pandas
-FastAPI
-Docker
-NBConvert
-Python
+ - Scikit-learn
+ - Pandas
+ - FastAPI
+ - Docker
+ - NBConvert
+ - Python
 
 > [!IMPORTANT]
 > Author: Piotr Karmelita.
