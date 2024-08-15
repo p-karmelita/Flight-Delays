@@ -1,7 +1,7 @@
 ![FlightDelays](https://assets.planespotters.net/files/user/profile/78/c1/78c1c06b-331e-4add-a276-1e7b1ed6166f_256.png)
 
 # Flight Delays
-> Flight Delays is a data science project where I use a basic linear regression model to predict the target variable arrival_delays from the flights dataset[^1].
+> Flight Delays is a data science project where I use a linear regression model to predict the target variable arrival_delays from the flights dataset[^1].
 
 ### Deployment
  - ```git clone https://github.com/p-karmelita/Flight-Delays.git```
@@ -19,5 +19,5 @@
 
 > Author: Piotr Karmelita
 
-[^1]: (https://www.kaggle.com/datasets/gauravmehta13/airline-flight-delays)
+[^1]: [Dataset](https://www.kaggle.com/datasets/gauravmehta13/airline-flight-delays)
 
