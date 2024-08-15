@@ -1,5 +1,5 @@
-from models import Base
-from database import engine
+# from models import Base
+# from database import engine
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
@@ -9,10 +9,10 @@ import uvicorn
 
 app = FastAPI()
 
-Base.metadata.create_all(bind=engine)
+# Base.metadata.create_all(bind=engine)
 
-app.mount('/static', StaticFiles(directory='static'), name='static')
-templates = Jinja2Templates(directory='templates')
+app.mount('/flight_delays/static', StaticFiles(directory='flight_delays/static'), name='static')
+templates = Jinja2Templates(directory='flight_delays/templates')
 
 
 @app.get('/', response_class=HTMLResponse)
