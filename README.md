@@ -4,9 +4,9 @@
 > Flight Delays is a data science project where I use a basic linear regression model to predict the target variable arrival_delays from the flights dataset.
 
 ### Deployment
-Clone repository
-```docker build -t flights .```
-```docker compose up```
+ - Clone repository
+ - ```docker build -t flights .```
+ - ```docker compose up```
 
 #### Technologies
  - Scikit-learn
@@ -18,3 +18,5 @@ Clone repository
 
 > [!IMPORTANT]
 > Author: Piotr Karmelita
+> [!NOTE]
+> https://www.kaggle.com/datasets/gauravmehta13/airline-flight-delays
