@@ -1,17 +1,1 @@
-> [!NOTE]
-> Flight Delays is a project where I use a basic linear regression model to predict the target variable arrival_delays from the flights dataset.
-
-> [!TECHNOLOGIES]
-> Scikit-learn
-> Pandas
-> FastAPI
-> Docker
-
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
-
-> [!WARNING]
-> Urgent info that needs immediate user attention to avoid problems.
-
-> [!CAUTION]
-> Advises about risks or negative outcomes of certain actions.
+![FlightDelays]([https://myoctocat.com/assets/images/base-octocat.svg](https://assets.planespotters.net/files/user/profile/78/c1/78c1c06b-331e-4add-a276-1e7b1ed6166f_256.png)
