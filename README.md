@@ -4,10 +4,8 @@
 > Flight Delays is a data science project where I use a basic linear regression model to predict the target variable arrival_delays from the flights dataset.
 
 ### Deployment
- Build the Docker image:
+Clone repository
 ```docker build -t flights .```
-
- Run the Docker container:
 ```docker compose up```
 
 #### Technologies
