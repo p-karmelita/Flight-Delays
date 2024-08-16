@@ -7,6 +7,7 @@ Flight Delays is a data science project where I use a linear regression model to
  - ```git clone https://github.com/p-karmelita/Flight-Delays.git```
  - ``docker build -t flights .``
  - `docker compose up`
+ - If it doesn't work on Windows change the localhost from 0.0.0.0:8000 to 127.0.0.1:8000
 
  ### Technologies
  - Scikit-learn
